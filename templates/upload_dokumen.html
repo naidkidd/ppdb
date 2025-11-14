@@ -1,0 +1,187 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard">
+    <h2>Upload Dokumen Tambahan</h2>
+
+    <div class="card">
+        <div class="progress-info">
+            <h3>Upload Dokumen Pendukung</h3>
+            <p>Silakan upload dokumen-dokumen berikut untuk melengkapi pendaftaran Anda:</p>
+        </div>
+
+        <div class="dokumen-grid">
+            <!-- Ijazah -->
+            <div class="dokumen-card">
+                <h4>Ijazah SMP/MTs</h4>
+                {% if dokumen.get('ijazah') %}
+                    <p class="status-uploaded">Sudah diupload: {{ dokumen['ijazah'].filename }}</p>
+                    <p class="status-info">Status: <span class="status-{{ dokumen['ijazah'].status }}">{{ dokumen['ijazah'].status|title }}</span></p>
+                    <form method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="jenis_dokumen" value="ijazah">
+                        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" required>
+                        <button type="submit" class="btn-secondary">Update Ijazah</button>
+                    </form>
+                {% else %}
+                    <p class="status-missing">Belum diupload</p>
+                    <form method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="jenis_dokumen" value="ijazah">
+                        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" required>
+                        <button type="submit" class="btn-primary">Upload Ijazah</button>
+                    </form>
+                {% endif %}
+            </div>
+
+            <!-- Rapor -->
+            <div class="dokumen-card">
+                <h4>Rapor Semester Terakhir</h4>
+                {% if dokumen.get('rapor') %}
+                    <p class="status-uploaded">Sudah diupload: {{ dokumen['rapor'].filename }}</p>
+                    <p class="status-info">Status: <span class="status-{{ dokumen['rapor'].status }}">{{ dokumen['rapor'].status|title }}</span></p>
+                    <form method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="jenis_dokumen" value="rapor">
+                        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" required>
+                        <button type="submit" class="btn-secondary">Update Rapor</button>
+                    </form>
+                {% else %}
+                    <p class="status-missing">Belum diupload</p>
+                    <form method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="jenis_dokumen" value="rapor">
+                        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" required>
+                        <button type="submit" class="btn-primary">Upload Rapor</button>
+                    </form>
+                {% endif %}
+            </div>
+
+            <!-- Kartu Keluarga -->
+            <div class="dokumen-card">
+                <h4>Kartu Keluarga (KK)</h4>
+                {% if dokumen.get('kk') %}
+                    <p class="status-uploaded">Sudah diupload: {{ dokumen['kk'].filename }}</p>
+                    <p class="status-info">Status: <span class="status-{{ dokumen['kk'].status }}">{{ dokumen['kk'].status|title }}</span></p>
+                    <form method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="jenis_dokumen" value="kk">
+                        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" required>
+                        <button type="submit" class="btn-secondary">Update KK</button>
+                    </form>
+                {% else %}
+                    <p class="status-missing">Belum diupload</p>
+                    <form method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="jenis_dokumen" value="kk">
+                        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" required>
+                        <button type="submit" class="btn-primary">Upload KK</button>
+                    </form>
+                {% endif %}
+            </div>
+
+            <!-- Akta Kelahiran -->
+            <div class="dokumen-card">
+                <h4>Akta Kelahiran</h4>
+                {% if dokumen.get('akta') %}
+                    <p class="status-uploaded">Sudah diupload: {{ dokumen['akta'].filename }}</p>
+                    <p class="status-info">Status: <span class="status-{{ dokumen['akta'].status }}">{{ dokumen['akta'].status|title }}</span></p>
+                    <form method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="jenis_dokumen" value="akta">
+                        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" required>
+                        <button type="submit" class="btn-secondary">Update Akta</button>
+                    </form>
+                {% else %}
+                    <p class="status-missing">Belum diupload</p>
+                    <form method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="jenis_dokumen" value="akta">
+                        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" required>
+                        <button type="submit" class="btn-primary">Upload Akta</button>
+                    </form>
+                {% endif %}
+            </div>
+
+            <!-- Pas Foto -->
+            <div class="dokumen-card">
+                <h4>Pas Foto 3x4</h4>
+                {% if dokumen.get('foto') %}
+                    <p class="status-uploaded">Sudah diupload: {{ dokumen['foto'].filename }}</p>
+                    <p class="status-info">Status: <span class="status-{{ dokumen['foto'].status }}">{{ dokumen['foto'].status|title }}</span></p>
+                    <form method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="jenis_dokumen" value="foto">
+                        <input type="file" name="file" accept=".jpg,.jpeg,.png" required>
+                        <button type="submit" class="btn-secondary">Update Foto</button>
+                    </form>
+                {% else %}
+                    <p class="status-missing">Belum diupload</p>
+                    <form method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="jenis_dokumen" value="foto">
+                        <input type="file" name="file" accept=".jpg,.jpeg,.png" required>
+                        <button type="submit" class="btn-primary">Upload Foto</button>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="form-note">
+            <p><strong>Catatan:</strong></p>
+            <ul>
+                <li>Format file yang didukung: PDF, JPG, JPEG, PNG</li>
+                <li>Ukuran maksimal file: 2MB</li>
+                <li>Pastikan file terbaca dengan jelas</li>
+                <li>Admin akan memverifikasi dokumen yang Anda upload</li>
+            </ul>
+        </div>
+
+        <div class="form-actions">
+            <a href="{{ url_for('dashboard_siswa') }}" class="btn-secondary">Kembali ke Dashboard</a>
+        </div>
+    </div>
+</div>
+
+<style>
+.dokumen-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.dokumen-card {
+    border: 1px solid #E0E0E0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: #FFFFFF;
+    text-align: center;
+}
+
+.dokumen-card h4 {
+    margin-top: 0;
+    color: #333333;
+}
+
+.status-uploaded {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.status-missing {
+    color: #F44336;
+    font-weight: bold;
+}
+
+.status-info {
+    margin: 5px 0;
+}
+
+.form-note ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.form-note li {
+    margin: 0.3rem 0;
+    color: #333333;
+}
+
+@media (max-width: 768px) {
+    .dokumen-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+{% endblock %}

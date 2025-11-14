@@ -1,0 +1,107 @@
+ADMIN_LOGIN_SUCCESS - IP: 127.0.0.1, User: ADMIN317, Details: Admin login successful
+LOGOUT - IP: 127.0.0.1, User: ADMIN317 (admin), Details: User logged out
+LOGIN_SUCCESS - IP: 127.0.0.1, User: siswa123, Details: Role: siswa
+LOGOUT - IP: 127.0.0.1, User: siswa123 (siswa), Details: User logged out
+ADMIN_LOGIN_SUCCESS - IP: 127.0.0.1, User: ADMIN317, Details: Admin login successful
+LOGOUT - IP: 127.0.0.1, User: ADMIN317 (admin), Details: User logged out
+REGISTRATION_SUCCESS - IP: 127.0.0.1, User: 4332411048, Details: New user registered
+LOGIN_SUCCESS - IP: 127.0.0.1, User: 4332411048, Details: Role: siswa
+LOGOUT - IP: 127.0.0.1, User: 4332411048 (siswa), Details: User logged out
+ADMIN_LOGIN_SUCCESS - IP: 127.0.0.1, User: ADMIN317, Details: Admin login successful
+LOGOUT - IP: 127.0.0.1, User: ADMIN317 (admin), Details: User logged out
+LOGIN_SUCCESS - IP: 127.0.0.1, User: 4332411048, Details: Role: siswa
+LOGOUT - IP: 127.0.0.1, User: 4332411048 (siswa), Details: User logged out
+ADMIN_LOGIN_SUCCESS - IP: 127.0.0.1, User: ADMIN317, Details: Admin login successful
+LOGIN_FAILED - IP: 192.168.238.1, User: siswa123, Details: Role attempted: siswa
+ADMIN_LOGIN_FAILED - IP: 192.168.238.1, User: ADMIN317, Details: Admin login failed
+REGISTRATION_SUCCESS - IP: 192.168.238.1, User: 4332401035, Details: New user registered
+LOGIN_SUCCESS - IP: 192.168.238.1, User: 4332401035, Details: Role: siswa
+REGISTRATION_SUCCESS - IP: 192.168.182.19, User: 00000052, Details: New user registered
+LOGIN_SUCCESS - IP: 192.168.182.19, User: 00000052, Details: Role: siswa
+LOGOUT - IP: 192.168.182.19, User: 00000052 (siswa), Details: User logged out
+ADMIN_LOGIN_FAILED - IP: 192.168.182.19, User: ADMIN317, Details: Admin login failed
+ADMIN_LOGIN_FAILED - IP: 192.168.182.19, User: admin, Details: Admin login failed
+ADMIN_LOGIN_FAILED - IP: 192.168.182.19, User: ADMIN317, Details: Admin login failed
+ADMIN_LOGIN_FAILED - IP: 192.168.182.19, User: admin' --, Details: Admin login failed
+ADMIN_LOGIN_FAILED - IP: 192.168.182.19, User: ' OR 1=1 --, Details: Admin login failed
+LOGOUT - IP: 192.168.238.1, User: 4332401035 (siswa), Details: User logged out
+ADMIN_LOGIN_FAILED - IP: 192.168.182.1, User: admin317, Details: Admin login failed
+ADMIN_LOGIN_SUCCESS - IP: 192.168.182.1, User: admin317, Details: Admin login successful
+REGISTRATION_SUCCESS - IP: 192.168.182.19, User: 4332411048, Details: New user registered
+LOGIN_SUCCESS - IP: 192.168.182.19, User: 4332411048, Details: Role: siswa
+LOGOUT - IP: 192.168.182.19, User: 4332411048 (siswa), Details: User logged out
+ADMIN_LOGIN_SUCCESS - IP: 192.168.182.19, User: admin317, Details: Admin login successful
+LOGOUT - IP: 192.168.182.19, User: admin317 (admin), Details: User logged out
+LOGIN_FAILED - IP: 192.168.182.19, User: admin317, Details: Role attempted: siswa
+LOGIN_FAILED - IP: 192.168.182.19, User: admin317, Details: Role attempted: siswa
+LOGIN_FAILED - IP: 192.168.182.19, User: ADMIN317, Details: Role attempted: siswa
+LOGIN_FAILED - IP: 192.168.182.19, User: admin, Details: Role attempted: siswa
+LOGIN_FAILED - IP: 192.168.182.19, User: ' OR 1=1 --, Details: Role attempted: siswa
+RATE_LIMITED - IP: 192.168.182.19, User: admin317, Details: Too many login attempts
+ADMIN_LOGIN_SUCCESS - IP: 192.168.182.19, User: admin317, Details: Admin login successful
+LOGOUT - IP: 192.168.182.19, User: admin317 (admin), Details: User logged out
+REGISTRATION_SUCCESS - IP: 192.168.182.19, User: 4332401041, Details: New user registered
+LOGIN_FAILED - IP: 192.168.182.19, User: Naila Fithriyah, Details: Role attempted: siswa
+LOGIN_SUCCESS - IP: 192.168.182.19, User: 4332401041, Details: Role: siswa
+LOGOUT - IP: 192.168.182.19, User: 4332401041 (siswa), Details: User logged out
+ADMIN_LOGIN_SUCCESS - IP: 192.168.182.19, User: admin317, Details: Admin login successful
+LOGOUT - IP: 192.168.182.19, User: admin317 (admin), Details: User logged out
+REGISTRATION_SUCCESS - IP: 192.168.182.1, User: 4332411052, Details: New user registered
+LOGIN_SUCCESS - IP: 192.168.182.1, User: 4332411052, Details: Role: siswa
+LOGOUT - IP: 192.168.182.1, User: 4332411052 (siswa), Details: User logged out
+ADMIN_LOGIN_SUCCESS - IP: 192.168.182.1, User: admin317, Details: Admin login successful
+LOGOUT - IP: 192.168.182.1, User: admin317 (admin), Details: User logged out
+LOGIN_SUCCESS - IP: 192.168.182.1, User: 4332411052, Details: Role: siswa
+LOGIN_SUCCESS - IP: 192.168.182.1, User: 4332411052, Details: Role: siswa
+REGISTRATION_SUCCESS - IP: 192.168.104.12, User: 4332401037, Details: New user registered
+LOGIN_SUCCESS - IP: 192.168.104.12, User: 4332401037, Details: Role: siswa
+ADMIN_LOGIN_SUCCESS - IP: 192.168.104.12, User: admin317, Details: Admin login successful
+ADMIN_LOGIN_SUCCESS - IP: 192.168.104.12, User: admin317, Details: Admin login successful
+ADMIN_LOGIN_SUCCESS - IP: 192.168.104.12, User: admin317, Details: Admin login successful
+LOGOUT - IP: 192.168.104.12, User: admin317 (admin), Details: User logged out
+ADMIN_LOGIN_SUCCESS - IP: 192.168.104.12, User: admin317, Details: Admin login successful
+LOGIN_SUCCESS - IP: 192.168.104.12, User: 4332401037, Details: Role: siswa
+LOGOUT - IP: 192.168.104.12, User: 4332401037 (siswa), Details: User logged out
+ADMIN_LOGIN_FAILED - IP: 192.168.104.12, User: admin317, Details: Admin login failed
+ADMIN_LOGIN_FAILED - IP: 192.168.104.12, User: admin317, Details: Admin login failed
+ADMIN_LOGIN_SUCCESS - IP: 192.168.104.12, User: admin, Details: Admin login successful
+LOGOUT - IP: 192.168.104.12, User: admin (admin), Details: User logged out
+ADMIN_LOGIN_SUCCESS - IP: 192.168.104.12, User: admin, Details: Admin login successful
+LOGOUT - IP: 192.168.104.12, User: admin (admin), Details: User logged out
+LOGIN_FAILED - IP: 192.168.104.12, User: 4332401037, Details: Role attempted: siswa
+LOGIN_FAILED - IP: 192.168.104.12, User: siswa, Details: Role attempted: siswa
+LOGIN_FAILED - IP: 192.168.104.12, User: siswa123, Details: Role attempted: siswa
+REGISTRATION_SUCCESS - IP: 192.168.104.12, User: 4332401037, Details: New user registered
+LOGIN_SUCCESS - IP: 192.168.104.12, User: 4332401037, Details: Role: siswa
+LOGOUT - IP: 192.168.104.12, User: 4332401037 (siswa), Details: User logged out
+ADMIN_LOGIN_SUCCESS - IP: 192.168.104.12, User: admin, Details: Admin login successful
+ADMIN_LOGIN_SUCCESS - IP: 192.168.104.12, User: admin, Details: Admin login successful
+ADMIN_LOGIN_SUCCESS - IP: 192.168.104.12, User: admin, Details: Admin login successful
+LOGOUT - IP: 192.168.104.12, User: admin (admin), Details: User logged out
+ADMIN_LOGIN_SUCCESS - IP: 192.168.104.12, User: admin, Details: Admin login successful
+ADMIN_LOGIN_SUCCESS - IP: 192.168.104.12, User: admin, Details: Admin login successful
+ADMIN_LOGIN_SUCCESS - IP: 192.168.104.7, User: admin, Details: Admin login successful
+LOGOUT - IP: 192.168.104.7, User: admin (admin), Details: User logged out
+ADMIN_LOGIN_SUCCESS - IP: 192.168.182.1, User: admin, Details: Admin login successful
+ADMIN_LOGIN_SUCCESS - IP: 192.168.182.1, User: admin317, Details: Admin login successful
+LOGOUT - IP: 192.168.182.1, User: admin317 (admin), Details: User logged out
+LOGIN_FAILED - IP: 192.168.182.1, User: ' OR 1 -- -, Details: Role attempted: siswa
+LOGIN_FAILED - IP: 192.168.182.1, User: " or sleep(5)#, Details: Role attempted: siswa
+LOGIN_FAILED - IP: 192.168.182.1, User: admin' or '1'='1'--, Details: Role attempted: siswa
+LOGIN_FAILED - IP: 192.168.182.1, User: admin' or '1'='1'--, Details: Role attempted: siswa
+LOGIN_FAILED - IP: 192.168.182.1, User: admin' --, Details: Role attempted: siswa
+RATE_LIMITED - IP: 192.168.182.1, User: ') or ('1'='1--, Details: Too many login attempts
+RATE_LIMITED - IP: 192.168.182.1, User: admin' --, Details: Too many login attempts
+RATE_LIMITED - IP: 192.168.182.1, User: admin' or '1'='1'--, Details: Too many login attempts
+RATE_LIMITED - IP: 192.168.182.1, User: admin' or '1'='1'--, Details: Too many login attempts
+RATE_LIMITED - IP: 192.168.182.1, User: admin' --, Details: Too many login attempts
+REGISTRATION_SUCCESS - IP: 192.168.182.17, User: 4332401035, Details: New user registered
+LOGIN_SUCCESS - IP: 192.168.182.17, User: 4332401035, Details: Role: siswa
+LOGOUT - IP: 192.168.182.17, User: 4332401035 (siswa), Details: User logged out
+ADMIN_LOGIN_FAILED - IP: 192.168.182.17, User: ADMIN317, Details: Admin login failed
+ADMIN_LOGIN_FAILED - IP: 192.168.182.17, User: ADMIN317, Details: Admin login failed
+ADMIN_LOGIN_SUCCESS - IP: 192.168.182.17, User: ADMIN317, Details: Admin login successful
+ADMIN_LOGIN_SUCCESS - IP: 192.168.182.17, User: ADMIN317, Details: Admin login successful
+LOGOUT - IP: 192.168.182.17, User: ADMIN317 (admin), Details: User logged out
+LOGIN_SUCCESS - IP: 192.168.182.17, User: 4332401035, Details: Role: siswa
+LOGOUT - IP: 192.168.182.17, User: 4332401035 (siswa), Details: User logged out

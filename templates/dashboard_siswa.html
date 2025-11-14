@@ -1,0 +1,196 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard">
+    <h2>Dashboard Calon Siswa</h2>
+
+    <!-- Info akun -->
+    <div class="card">
+        <h3>Informasi Akun</h3>
+        <p><strong>Selamat datang, {{ user.nama_decrypted }}!</strong></p>
+        <p>Username/NIS: <strong>{{ user.username }}</strong></p>
+        <p>Status: <span class="status-{{ user.status }}">{{ user.status|title }}</span></p>
+    </div>
+
+    <div class="card">
+        <h3>Data Pendaftaran</h3>
+        {% if user.tempat_lahir_decrypted %}
+            <div class="data-grid">
+                <div class="data-item">
+                    <strong>Nama:</strong>
+                    <span>{{ user.nama_decrypted }}</span>
+                </div>
+                <div class="data-item">
+                    <strong>Username:</strong>
+                    <span>{{ user.username }}</span>
+                </div>
+                <div class="data-item">
+                    <strong>Tempat Lahir:</strong>
+                    <span>{{ user.tempat_lahir_decrypted }}</span>
+                </div>
+                <div class="data-item">
+                    <strong>Tanggal Lahir:</strong>
+                    <span>{{ user.tanggal_lahir.strftime('%d-%m-%Y') if user.tanggal_lahir else '-' }}</span>
+                </div>
+                <div class="data-item">
+                    <strong>Jenis Kelamin:</strong>
+                    <span>{{ user.jenis_kelamin_decrypted }}</span>
+                </div>
+                <div class="data-item">
+                    <strong>Agama:</strong>
+                    <span>{{ user.agama_decrypted }}</span>
+                </div>
+                <div class="data-item full-width">
+                    <strong>Alamat:</strong>
+                    <span>{{ user.alamat_decrypted }}</span>
+                </div>
+                <div class="data-item">
+                    <strong>No. HP:</strong>
+                    <span>{{ user.no_hp_decrypted }}</span>
+                </div>
+                <div class="data-item">
+                    <strong>Asal Sekolah:</strong>
+                    <span>{{ user.asal_sekolah_decrypted }}</span>
+                </div>
+                <div class="data-item">
+                    <strong>Nama Ayah:</strong>
+                    <span>{{ user.nama_ayah_decrypted }}</span>
+                </div>
+                <div class="data-item">
+                    <strong>Pekerjaan Ayah:</strong>
+                    <span>{{ user.pekerjaan_ayah_decrypted }}</span>
+                </div>
+                <div class="data-item">
+                    <strong>Nama Ibu:</strong>
+                    <span>{{ user.nama_ibu_decrypted }}</span>
+                </div>
+                <div class="data-item">
+                    <strong>Pekerjaan Ibu:</strong>
+                    <span>{{ user.pekerjaan_ibu_decrypted }}</span>
+                </div>
+            </div>
+            <div class="form-actions">
+                <a href="{{ url_for('lengkapi_data_siswa') }}" class="btn-secondary">Edit Data</a>
+                <a href="{{ url_for('upload_dokumen') }}" class="btn-primary">Upload Dokumen</a>
+            </div>
+        {% else %}
+            <p>Data pribadi belum lengkap. Silakan lengkapi data Anda.</p>
+            <a href="{{ url_for('lengkapi_data_siswa') }}" class="btn-primary">Lengkapi Data</a>
+        {% endif %}
+    </div>
+
+    <div class="card">
+        <h3>Status Pendaftaran</h3>
+        <div class="data-grid">
+            <div class="data-item">
+                <strong>Status:</strong>
+                <span class="status-{{ user.status }}">{{ user.status|title }}</span>
+            </div>
+        </div>
+        
+        {% if user.status == 'belum_lengkap' %}
+            <div class="info-message">Silakan lengkapi data pribadi dan upload dokumen yang diperlukan.</div>
+        {% elif user.status == 'menunggu' %}
+            <div class="info-message">Pendaftaran Anda sedang dalam proses verifikasi oleh admin.</div>
+        {% elif user.status == 'lulus' %}
+            <div class="success-message">Selamat! Anda dinyatakan LULUS seleksi pendaftaran.</div>
+        {% elif user.status == 'tidak_lulus' %}
+            <div class="error-message">Maaf, Anda dinyatakan TIDAK LULUS seleksi pendaftaran.</div>
+        {% endif %}
+
+        {% if bukti %}
+            <div class="data-grid">
+                <div class="data-item">
+                    <strong>File Bukti:</strong>
+                    <span>{{ bukti.filename }}</span>
+                </div>
+                <div class="data-item">
+                    <strong>Status Bukti:</strong>
+                    <span class="status-{{ bukti.status }}">{{ bukti.status|title }}</span>
+                </div>
+                <div class="data-item">
+                    <strong>Tanggal Upload:</strong>
+                    <span>{{ bukti.tanggal_upload.strftime('%d-%m-%Y %H:%M') }}</span>
+                </div>
+            </div>
+        {% else %}
+            <p>Anda belum mengupload bukti pendaftaran.</p>
+        {% endif %}
+
+        <a href="{{ url_for('upload_bukti') }}" class="btn-primary">Upload Bukti Pendaftaran</a>
+    </div>
+
+    {% if pengumuman %}
+    <div class="card">
+        <h3>Pengumuman Terbaru</h3>
+        <h4>{{ pengumuman.judul }}</h4>
+        <p>{{ pengumuman.isi }}</p>
+        <small>Diposting: {{ pengumuman.tanggal.strftime('%d-%m-%Y %H:%M') }}</small>
+    </div>
+    {% endif %}
+</div>
+
+<style>
+.info-message, .success-message, .error-message {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.info-message {
+    background: #E3F2FD;
+    color: #1565C0;
+    border: 1px solid #BBDEFB;
+}
+
+.success-message {
+    background: #E8F5E8;
+    color: #2E7D32;
+    border: 1px solid #C8E6C9;
+}
+
+.error-message {
+    background: #FFEBEE;
+    color: #C62828;
+    border: 1px solid #FFCDD2;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.data-item {
+    padding: 1rem;
+    background: #F8F9FA;
+    border-radius: 8px;
+    border-left: 3px solid #A0D787;
+}
+
+.data-item strong {
+    display: block;
+    color: #A0D787;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.data-item span {
+    color: #333333;
+    font-size: 1rem;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+</style>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard">
+    <h2>Upload Bukti Pendaftaran</h2>
+    
+    <div class="card">
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Pilih File</label>
+                <input type="file" id="file" name="file" accept=".pdf,.jpg,.jpeg,.png" required>
+                <small>Format yang didukung: PDF, JPG, JPEG, PNG (Maksimal 2MB)</small>
+            </div>
+            
+            <button type="submit" class="btn-primary">Upload File</button>
+            <a href="{{ url_for('dashboard_siswa') }}" class="btn-secondary">Kembali</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
