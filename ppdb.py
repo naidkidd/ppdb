@@ -83,6 +83,15 @@ class RateLimiter:
     def reset_attempts(self, ip_address):
         if ip_address in self.attempts:
             del self.attempts[ip_address]
+            
+    def get_remaining_time(self, ip_address):
+        if ip_address not in self.attempts or not self.attempts[ip_address]:
+            return 0
+        
+        current_time = time.time()
+        oldest_attempt = min(self.attempts[ip_address])
+        time_passed = current_time - oldest_attempt
+        return max(0, self.window_time - time_passed)
 
 rate_limiter = RateLimiter()
 
